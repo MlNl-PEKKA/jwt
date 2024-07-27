@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:local": "npx supabase gen types --lang=typescript --local > types/supabase.ts",
+    "db:dev": "npx supabase gen types --lang=typescript --project-id PROJECT_REF --schema public > types/supabase.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.44.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.416.0",
